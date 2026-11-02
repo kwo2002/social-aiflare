@@ -1,0 +1,8 @@
+{
+  "name": "unrest-therapy",
+  "private": true,
+  "devDependencies": {
+    "cf": "^0.15.0",
+    "wrangler": "^4.156.2"
+  }
+}

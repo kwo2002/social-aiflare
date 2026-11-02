@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { buildICS, escapeICS, foldLine, fmtLocal } = require('../js/share.js');
+const { buildICS, escapeICS, foldLine, fmtLocal } = require('../public/js/share.js');
 
 test('escapeICS escapes backslash, comma, semicolon, newline', () => {
   assert.strictEqual(escapeICS('a\\b,c;d\ne'), 'a\\\\b\\,c\\;d\\ne');

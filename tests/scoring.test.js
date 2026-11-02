@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const S = require('../js/scoring.js');
+const S = require('../public/js/scoring.js');
 
 const base = { s1: 0, s2: 0, s3: 0, s4: 0, s5: 0, s6: 0, s7: 0, duration: '<1m', suicide: 0 };
 
