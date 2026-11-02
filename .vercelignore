@@ -1,0 +1,6 @@
+# 배포하지 않을 것: 브레인스토밍 시안, 테스트, 개발 문서
+.superpowers
+tests
+docs
+.idea
+.git

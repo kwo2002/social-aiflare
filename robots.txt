@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://social.aiflare.dev/sitemap.xml

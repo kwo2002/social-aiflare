@@ -1,0 +1,15 @@
+# 브레인스토밍 시안 (이전 초안 HTML 포함)
+.superpowers/
+
+# Vercel CLI가 만드는 프로젝트 연결 정보
+.vercel/
+
+# 기타
+node_modules/
+.DS_Store
+*.log
+.env*
+
+# 편집기 설정
+.idea/
+.vscode/

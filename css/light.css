@@ -1,0 +1,38 @@
+/* 간단 버전: 같은 종이·잉크 체계에 선택 칩과 큰 단계 표시만 더한다 */
+.lite main.wrap{padding-block:36px 72px}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:22px 0}
+.chip{display:flex;align-items:center;gap:12px;text-align:left;padding:14px 16px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:16px;line-height:1.45;cursor:pointer;min-height:56px}
+.chip:hover{border-color:var(--field)}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg);font-weight:500}
+.chip .sub{display:block;font-size:13.5px;color:var(--muted);font-weight:400;margin-top:2px}
+.chip[aria-pressed="true"] .sub{color:var(--bg);opacity:.8}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chips.one{grid-template-columns:1fr}
+.prog{font-size:14px;color:var(--muted);margin-bottom:10px}
+.bar-steps{display:flex;gap:4px;margin-bottom:22px}
+.bar-steps i{flex:1;height:4px;background:var(--line);border-radius:2px}
+.bar-steps i.on{background:var(--ink)}
+.hint{font-size:15.5px;color:var(--muted);margin-top:8px}
+.path{list-style:none;padding:0;margin:26px 0;border-top:1px solid var(--line);counter-reset:p}
+.path li{display:grid;grid-template-columns:40px 1fr auto;gap:4px 14px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);counter-increment:p}
+.path li::before{content:counter(p);width:32px;height:32px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:600;color:var(--ink);grid-row:1/span 2}
+.path li.done::before{content:"✓";background:var(--ink);color:var(--bg)}
+.path li b{font-size:18px;color:var(--ink)}
+.path li span{font-size:15px;color:var(--muted);grid-column:2}
+.path li .btn{grid-column:3;grid-row:1/span 2}
+.say{font-size:19px;line-height:1.75;color:var(--ink);margin:18px 0}
+.ok-box{border-left:3px solid var(--accent);background:var(--accent-soft);padding:14px 18px;margin:20px 0;font-size:16.5px;color:var(--ink)}
+.ins{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px}
+.ins li{padding:14px 16px;background:var(--sunk);border-radius:6px;font-size:16px;color:var(--ink);line-height:1.7}
+.slider.empty output{color:var(--muted)}
+.slider.empty input{opacity:.55}
+.level{font-size:14px;font-weight:600;color:var(--muted);margin:28px 0 6px}
+.match{font-size:12.5px;font-weight:600;color:var(--accent);margin-left:6px}
+@media (max-width:600px){
+  .chips{grid-template-columns:1fr}
+  .path li{grid-template-columns:36px 1fr}
+  .path li .btn{grid-column:2;grid-row:auto;justify-self:start;margin-top:8px}
+  .say{font-size:17.5px}
+}
+
+.linkish{background:none;border:0;padding:4px 2px;font:inherit;font-size:inherit;color:var(--accent);text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:44px}
